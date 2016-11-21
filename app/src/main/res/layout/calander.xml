@@ -12,9 +12,10 @@
         android:text="Go Back"
         android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_below="@+id/calendarView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="61dp"
-        android:onClick="goBack"/>
+        android:id="@+id/goback"
+        android:onClick="goBack"
+        android:layout_marginBottom="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

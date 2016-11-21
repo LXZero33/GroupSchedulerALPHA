@@ -22,4 +22,5 @@ public class Welcome extends AppCompatActivity {
         setContentView(R.layout.check_app);
     }
 
+
 }

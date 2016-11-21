@@ -12,4 +12,7 @@ public class CreateAppointment extends AppCompatActivity{
         setTitle("Create an Appointment");
     }
 
+    public void sendToCloud(){
+        setContentView(R.layout.welcome);
+    }
 }
