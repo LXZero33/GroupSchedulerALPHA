@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:text="Event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_weight="0.05"
+        android:layout_marginTop="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize ="20dp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_dark" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Event Name"
+        android:ems="10"
+        android:id="@+id/editText6"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="?android:attr/textColorHint" />
+
+    <TextView
+        android:text="date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/editText6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize ="20dp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_dark" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/editText5"
+        android:text="mm/dd/yy"
+        android:textColor="?android:attr/textColorHint"
+        android:layout_below="@+id/textView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+<!--
+sAM = set the event at time AM
+aAM = set alarm at time AM
+-->
+    <Button
+        android:text="Set Appointment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:id="@+id/button3"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/editText5"
+        android:layout_toEndOf="@+id/editText5"
+        android:onClick="sendToCloud"/>
+
+    <TextView
+        android:text="Description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:id="@+id/textView6"
+        android:textStyle="normal|bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/setalarm"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Description"
+        android:ems="10"
+        android:id="@+id/editText8"
+        android:textSize ="20dp"
+        android:textColor="?android:attr/textColorHint"
+        android:layout_below="@+id/textView6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Set time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settime"
+        android:textSize="20dp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/editText5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/editText7"
+        android:text="12:00"
+        android:textColor="?android:attr/textColorHint"
+        android:layout_below="@+id/settime"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RadioButton
+        android:text="AM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sAM"
+        android:layout_alignBaseline="@+id/editText7"
+        android:layout_alignBottom="@+id/editText7"
+        android:layout_toLeftOf="@+id/sPM"
+        android:layout_toStartOf="@+id/sPM" />
+
+    <TextView
+        android:text="Set Alarm/reminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/setalarm"
+        android:textSize ="20dp"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_dark"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/editText7"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:layout_below="@+id/setalarm"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/editText10" />
+
+    <RadioButton
+        android:text="PM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aPM"
+        android:layout_alignBottom="@+id/editText10"
+        android:layout_toRightOf="@+id/editText10"
+        android:layout_toEndOf="@+id/editText10" />
+
+    <RadioButton
+        android:text="AM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/aAM"
+        android:layout_alignBottom="@+id/editText10"
+        android:layout_toLeftOf="@+id/aPM"
+        android:layout_toStartOf="@+id/aPM" />
+
+    <RadioButton
+        android:text="PM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sPM"
+        android:layout_alignBaseline="@+id/editText7"
+        android:layout_alignBottom="@+id/editText7"
+        android:layout_toRightOf="@+id/editText7"
+        android:layout_toEndOf="@+id/editText7" />
+
+</RelativeLayout>
