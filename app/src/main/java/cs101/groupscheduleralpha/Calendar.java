@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
  * Created by Bahn on 11/21/2016.
  */
 
-public class Calander extends AppCompatActivity {
+public class Calendar extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
