@@ -1,5 +1,6 @@
 package cs101.groupscheduleralpha;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
@@ -18,7 +19,10 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 username = ((EditText)findViewById(R.id.editText)).getText().toString();
                 password = ((EditText)findViewById(R.id.editText4)).getText().toString();
-                setContentView(R.layout.welcome);
+                Intent intent = new Intent(getApplicationContext(), Welcome.class);
+                intent.putExtra("Username", username);
+                intent.putExtra("Password", password);
+                startActivity(intent);
             }
 
         });

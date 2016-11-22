@@ -17,7 +17,7 @@ public class CheckAppointment extends AppCompatActivity {
 
     }
     public void goToCalendar(){
-        setContentView(R.layout.calander);
+        setContentView(R.layout.calendar);
     }
     public void goBack(){
         setContentView(R.layout.welcome);

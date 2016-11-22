@@ -22,7 +22,6 @@ Button bSetApp;
                     }
                 }
         );
-
     }
 
 //    public void sendToCloud(){
