@@ -16,22 +16,31 @@ Button checkApp;
         setContentView(R.layout.welcome);
         setTitle("Group Scheduler");
         setApp = (Button) findViewById(R.id.createapp);
-        bSetApp.setOnClickListener(
+        setApp.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View view){
-                        Intent intent = new Intent(getApplicationContext(), Welcome.class);
+                        Intent intent = new Intent(getApplicationContext(), CreateAppointment.class);
+                        startActivity(intent);
+                    }
+                }
+        );
+        checkApp = (Button) findViewById(R.id.checkapp);
+        checkApp.setOnClickListener(
+                new Button.OnClickListener() {
+                    public void onClick(View view){
+                        Intent intent = new Intent(getApplicationContext(), CheckAppointment.class);
                         startActivity(intent);
                     }
                 }
         );
     }
 
-    public void setAppointment(){
-        setContentView(R.layout.create_app);
-    }
-    public void checkAppointment(){
-        setContentView(R.layout.check_app);
-    }
+//    public void setAppointment(){
+//        setContentView(R.layout.create_app);
+//    }
+//    public void checkAppointment(){
+//        setContentView(R.layout.check_app);
+//    }
 
 
 }

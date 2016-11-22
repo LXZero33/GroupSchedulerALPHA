@@ -15,8 +15,6 @@ public class Calendar extends AppCompatActivity {
         setContentView(R.layout.create_app);
         setTitle("Check Appointments");
 
-    }
-    public void goBack(){
-        setContentView(R.layout.check_app);
+
     }
 }

@@ -15,12 +15,12 @@ Button bSetApp;
         setTitle("Create an Appointment");
         bSetApp = (Button) findViewById(R.id.button3);
         bSetApp.setOnClickListener(
-                new Button.OnClickListener() {
-                    public void onClick(View view){
-                        Intent intent = new Intent(getApplicationContext(), Welcome.class);
-                        startActivity(intent);
-                    }
+            new Button.OnClickListener() {
+                public void onClick(View view){
+                    Intent intent = new Intent(getApplicationContext(), Welcome.class);
+                    startActivity(intent);
                 }
+            }
         );
     }
 
