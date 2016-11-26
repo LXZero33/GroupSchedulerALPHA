@@ -8,8 +8,8 @@ import android.widget.EditText;
 import android.view.View;
 
 public class Login extends AppCompatActivity {
-    private String username = "[pp";
-    private String password;
+    private String username = "app";
+    private String password = "hello";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,8 +17,8 @@ public class Login extends AppCompatActivity {
         Button loginButton = (Button)findViewById(R.id.button);
         loginButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                username = ((EditText)findViewById(R.id.editText)).getText().toString();
-                password = ((EditText)findViewById(R.id.editText4)).getText().toString();
+                username = ((EditText)findViewById(R.id.usernameInput)).getText().toString();
+                password = ((EditText)findViewById(R.id.passwordInput)).getText().toString();
                 Intent intent = new Intent(getApplicationContext(), Welcome.class);
                 intent.putExtra("Username", username);
                 intent.putExtra("Password", password);

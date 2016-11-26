@@ -15,7 +15,7 @@ Button bSetApp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.create_app);
+        setContentView(R.layout.check_app);
         setTitle("Check Appointments");
         bSetApp =  (Button) findViewById(R.id.button3);
         bSetApp.setOnClickListener(

@@ -2,7 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
     <TextView
         android:text="Event"
@@ -22,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Event Name"
+        android:hint="Event Name"
         android:ems="10"
         android:id="@+id/editText6"
         android:layout_below="@+id/textView2"
@@ -31,7 +33,7 @@
         android:textColor="?android:attr/textColorHint" />
 
     <TextView
-        android:text="date"
+        android:text="Date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView3"
@@ -49,7 +51,7 @@
         android:inputType="date"
         android:ems="10"
         android:id="@+id/editText5"
-        android:text="mm/dd/yy"
+        android:hint="mm/dd/yy"
         android:textColor="?android:attr/textColorHint"
         android:layout_below="@+id/textView3"
         android:layout_alignParentLeft="true"
@@ -86,7 +88,7 @@ aAM = set alarm at time AM
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Description"
+        android:hint="Description"
         android:ems="10"
         android:id="@+id/editText8"
         android:textSize ="20dp"
@@ -113,7 +115,7 @@ aAM = set alarm at time AM
         android:inputType="time"
         android:ems="10"
         android:id="@+id/editText7"
-        android:text="12:00"
+        android:hint="12:00"
         android:textColor="?android:attr/textColorHint"
         android:layout_below="@+id/settime"
         android:layout_alignParentLeft="true"
@@ -146,7 +148,7 @@ aAM = set alarm at time AM
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="Name"
         android:ems="10"
         android:layout_below="@+id/setalarm"
         android:layout_alignParentLeft="true"

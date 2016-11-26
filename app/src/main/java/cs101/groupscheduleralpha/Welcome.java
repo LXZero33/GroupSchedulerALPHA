@@ -17,12 +17,12 @@ Button checkApp;
         setTitle("Group Scheduler");
         setApp = (Button) findViewById(R.id.createapp);
         setApp.setOnClickListener(
-                new Button.OnClickListener() {
-                    public void onClick(View view){
-                        Intent intent = new Intent(getApplicationContext(), CreateAppointment.class);
-                        startActivity(intent);
-                    }
+            new Button.OnClickListener() {
+                public void onClick(View view){
+                    Intent intent = new Intent(getApplicationContext(), CreateAppointment.class);
+                    startActivity(intent);
                 }
+            }
         );
         checkApp = (Button) findViewById(R.id.checkapp);
         checkApp.setOnClickListener(
