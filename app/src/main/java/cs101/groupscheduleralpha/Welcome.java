@@ -35,12 +35,5 @@ Button checkApp;
         );
     }
 
-//    public void setAppointment(){
-//        setContentView(R.layout.create_app);
-//    }
-//    public void checkAppointment(){
-//        setContentView(R.layout.check_app);
-//    }
-
 
 }
