@@ -71,19 +71,6 @@ aAM = set alarm at time AM
         android:layout_toEndOf="@+id/editText5"
         android:onClick="sendToCloud"/>
 
-    <TextView
-        android:text="Description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="41dp"
-        android:id="@+id/textView6"
-        android:textStyle="normal|bold"
-        android:textSize="20sp"
-        android:textColor="@android:color/background_dark"
-        android:layout_below="@+id/setalarm"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -109,78 +96,78 @@ aAM = set alarm at time AM
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/TimeMinutes"
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6">
+        <RadioButton
+            android:text="PM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sPM"
+            android:layout_alignBaseline="@+id/TimeMinutes"
+            android:layout_alignBottom="@+id/TimeMinutes"
+            android:layout_toRightOf="@+id/TimeMinutes"
+            android:layout_toEndOf="@+id/TimeMinutes"
+            android:onClick="onSetTime"/>
+        <RadioButton
+            android:text="AM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sAM"
+            android:layout_alignBaseline="@+id/TimeMinutes"
+            android:layout_alignBottom="@+id/TimeMinutes"
+            android:layout_toLeftOf="@+id/sPM"
+            android:layout_toStartOf="@+id/sPM"
+            android:onClick="onSetTime"/>
+
+    </RadioGroup>
+
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="20dp"
         android:layout_height="wrap_content"
         android:inputType="time"
         android:ems="10"
-        android:id="@+id/editText7"
-        android:hint="12:00"
+        android:id="@+id/TimeHours"
+        android:hint="12"
+
         android:textColor="?android:attr/textColorHint"
         android:layout_below="@+id/settime"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <RadioButton
-        android:text="AM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sAM"
-        android:layout_alignBaseline="@+id/editText7"
-        android:layout_alignBottom="@+id/editText7"
-        android:layout_toLeftOf="@+id/sPM"
-        android:layout_toStartOf="@+id/sPM" />
-
-    <TextView
-        android:text="Set Alarm/reminder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/setalarm"
-        android:textSize ="20dp"
-        android:textStyle="normal|bold"
-        android:textColor="@android:color/background_dark"
-        android:layout_marginTop="18dp"
-        android:layout_below="@+id/editText7"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/textView3"
+        android:layout_alignEnd="@+id/textView3" />
 
     <EditText
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/TimeMinutes"
+        android:hint="00"
+
+        android:textColor="?android:attr/textColorHint"
+        android:layout_alignBaseline="@+id/TimeHours"
+        android:layout_alignBottom="@+id/TimeHours"
+        android:layout_toRightOf="@+id/TimeHours"
+        android:layout_alignRight="@+id/settime"
+        android:layout_alignEnd="@+id/settime" />
+
+    <TextView
+        android:text="Description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:hint="Name"
-        android:ems="10"
-        android:layout_below="@+id/setalarm"
+        android:layout_marginTop="64dp"
+        android:id="@+id/textView6"
+        android:textStyle="normal|bold"
+        android:textSize="20sp"
+        android:textColor="@android:color/background_dark"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/editText10" />
-
-    <RadioButton
-        android:text="PM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/aPM"
-        android:layout_alignBottom="@+id/editText10"
-        android:layout_toRightOf="@+id/editText10"
-        android:layout_toEndOf="@+id/editText10" />
-
-    <RadioButton
-        android:text="AM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/aAM"
-        android:layout_alignBottom="@+id/editText10"
-        android:layout_toLeftOf="@+id/aPM"
-        android:layout_toStartOf="@+id/aPM" />
-
-    <RadioButton
-        android:text="PM"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/sPM"
-        android:layout_alignBaseline="@+id/editText7"
-        android:layout_alignBottom="@+id/editText7"
-        android:layout_toRightOf="@+id/editText7"
-        android:layout_toEndOf="@+id/editText7" />
+        android:layout_below="@+id/settime" />
 
 </RelativeLayout>

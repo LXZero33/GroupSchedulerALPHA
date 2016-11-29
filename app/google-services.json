@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "379712693737",
+    "firebase_url": "https://groupscheduleralpha.firebaseio.com",
+    "project_id": "groupscheduleralpha",
+    "storage_bucket": "groupscheduleralpha.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379712693737:android:0316acdbb67464e0",
+        "android_client_info": {
+          "package_name": "cs101.groupscheduleralpha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379712693737-pllsuio2k93ebtfj93buocl35u4pj14q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cs101.groupscheduleralpha",
+            "certificate_hash": "011309AD4A964C4F8B0C84421C4FDE5A950629C4"
+          }
+        },
+        {
+          "client_id": "379712693737-n060lqmprukq5v8or3jid9eh36v36hh3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXKxUJTh3TIpy3WUA8W0z1fTw4x0o76B4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379712693737-n060lqmprukq5v8or3jid9eh36v36hh3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

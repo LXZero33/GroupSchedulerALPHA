@@ -11,55 +11,14 @@
     android:background="#ffffff"
     tools:context="cs101.groupscheduleralpha.Login">
 
-    <TextView
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Username:"
-        android:id="@+id/textView"
-        android:layout_marginTop="13dp"
+        android:visibility="visible"
+        android:layout_gravity="center"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:background="#55ddf1fc"
-        android:id="@+id/usernameInput"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password:"
-        android:id="@+id/textView2"
-        android:layout_marginTop="31dp"
-        android:layout_below="@+id/usernameInput"
-        android:layout_alignLeft="@+id/usernameInput"
-        android:layout_alignStart="@+id/usernameInput" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:ems="10"
-        android:background="#55ddf1fc"
-        android:id="@+id/passwordInput"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:inputType="textPassword" />
-    <Button
-        android:text="Log In"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:id="@+id/button"
-        android:layout_below="@+id/passwordInput"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="189dp" />
 
 </RelativeLayout>

@@ -4,78 +4,101 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
-public class CreateAppointment extends AppCompatActivity{
-    Button bSetApp;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+public class CreateAppointment extends AppCompatActivity {
     EditText eventName;
     EditText date;
     EditText desc;
-    EditText time;
-    EditText name;
+    EditText timemins,timehours;
+    String timeday;
+    private DatabaseReference mFirebaseDatabaseReference;
+    private DatabaseReference mDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_app);
         setTitle("Create an Appointment");
-        bSetApp = (Button) findViewById(R.id.button3);
-        bSetApp.setOnClickListener(
-            new Button.OnClickListener() {
-                public void onClick(View view){
-                    Intent intent = new Intent(getApplicationContext(), Welcome.class);
-                    startActivity(intent);
-                }
-            }
-        );
+        mFirebaseDatabaseReference = FirebaseDatabase.getInstance().getReference();
         eventName = (EditText) findViewById(R.id.editText6);
-        eventName.setOnFocusChangeListener(new View.OnFocusChangeListener(){
-            public void onFocusChange(View v, boolean hasFocus){
-                if(hasFocus)
+        eventName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus)
                     eventName.setHint("");
                 else
                     eventName.setHint("Event Name");
             }
         });
         date = (EditText) findViewById(R.id.editText5);
-        date.setOnFocusChangeListener(new View.OnFocusChangeListener(){
-            public void onFocusChange(View v, boolean hasFocus){
-                if(hasFocus)
+        date.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus)
                     date.setHint("");
                 else
                     date.setHint("mm/dd/yy");
             }
         });
         desc = (EditText) findViewById(R.id.editText8);
-        desc.setOnFocusChangeListener(new View.OnFocusChangeListener(){
-            public void onFocusChange(View v, boolean hasFocus){
-                if(hasFocus)
+        desc.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus)
                     desc.setHint("");
                 else
                     desc.setHint("Description");
             }
         });
-        time = (EditText) findViewById(R.id.editText7);
-        time.setOnFocusChangeListener(new View.OnFocusChangeListener(){
-            public void onFocusChange(View v, boolean hasFocus){
-                if(hasFocus)
-                    time.setHint("");
+        timemins = (EditText) findViewById(R.id.TimeMinutes);
+        timemins.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus)
+                    timemins.setHint("");
                 else
-                    time.setHint("12:00");
+                    timemins.setHint("00");
             }
         });
-        name = (EditText) findViewById(R.id.editText10);
-        name.setOnFocusChangeListener(new View.OnFocusChangeListener(){
-            public void onFocusChange(View v, boolean hasFocus){
-                if(hasFocus)
-                    name.setHint("");
+        timehours = (EditText) findViewById(R.id.TimeHours);
+        timehours.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (hasFocus)
+                    timehours.setHint("");
                 else
-                    name.setHint("Name");
+                    timehours.setHint("12");
             }
         });
     }
 
-//    public void sendToCloud(){
-//
-//    }
+    public void onSetTime(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
+
+        switch (view.getId()) {
+            case R.id.sAM:
+                if (checked)
+                    timeday = "AM";
+                break;
+            case R.id.sPM:
+                if (checked)
+                    timeday = "PM";
+                break;
+        }
+
+    }
+
+    public String textString(EditText e){
+        return e.getText().toString();
+    }
+
+    public void sendToCloud(View view) {
+        AppointmentData c;
+        //(String d, String t, String td,  String de, String e)
+        c = new AppointmentData(textString(date),textString(timehours) + " : "+ textString(timemins),timeday,textString(desc),textString(eventName));
+        mFirebaseDatabaseReference.child("event").setValue(c);
+        Intent intent = new Intent(getApplicationContext(), Welcome.class);
+        startActivity(intent);
+    }
 }
+
